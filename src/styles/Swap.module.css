@@ -1,0 +1,69 @@
+.container {
+    background: #ffffff;
+    padding: 24px;
+    max-width: 400px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .heading {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .selects {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .selectGroup {
+    flex: 1;
+  }
+  
+  .label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #555;
+  }
+  
+  .inputGroup {
+    margin-bottom: 20px;
+  }
+  
+  .input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .button {
+    width: 100%;
+    background: #111;
+    color: #fff;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .button:disabled {
+    background: #999;
+    cursor: not-allowed;
+  }
+  
+  .result {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 500;
+    color: #2c7a3d;
+  }
