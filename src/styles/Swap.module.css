@@ -1,0 +1,113 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1.5rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(80, 250, 123, 0.1);
+  color: white;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subheading {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #bbbbbb;
+}
+
+.selects {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.selectGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+.inputGroup {
+  margin-bottom: 1.5rem;
+}
+
+.input {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #333;
+  background-color: #111;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #666;
+}
+
+.button {
+  width: 100%;
+  background: linear-gradient(90deg, #50fa7b, #8be9fd);
+  color: #000;
+  font-weight: bold;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(80, 250, 123, 0.4);
+}
+
+.result {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #8be9fd;
+}
+
+.routeDetails {
+  margin-top: 2rem;
+}
+
+.pageContainer {
+  padding: 24px;
+}
+
+.homeLink {
+  color: #9ee6ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  font-size: 15px;
+  border-bottom: 1px solid transparent;
+}
+
+.homeLink:hover {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
