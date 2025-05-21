@@ -1,23 +1,35 @@
 'use client'
 
-import { TOKENS } from '@/lib/tokens'
 import styles from '@/styles/TokenSelect.module.css'
 
+interface Token {
+  symbol: string
+  name: string
+  address: string
+  decimals: number
+  icon: string
+}
+
 export function TokenSelect({
+  tokens,
   value,
   onChange,
 }: {
-  value: string
-  onChange: (symbol: string) => void
+  tokens: Token[]
+  value: string | null
+  onChange: (address: string) => void
 }) {
   return (
     <select
       className={styles.select}
-      value={value}
+      value={value || ''}
       onChange={(e) => onChange(e.target.value)}
     >
-      {TOKENS.map((token) => (
-        <option key={token.symbol} value={token.symbol}>
+      <option value="" disabled>
+        Select token
+      </option>
+      {tokens.map((token) => (
+        <option key={token.address} value={token.address}>
           {token.symbol}
         </option>
       ))}

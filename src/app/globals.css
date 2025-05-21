@@ -1,1 +1,10 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
 
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top left, #1e1e2f, #121212);
+}

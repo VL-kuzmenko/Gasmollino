@@ -5,7 +5,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ru">
       <body>
-        <Provider>{children}</Provider>
+        <Provider>
+          <div className='container'>
+           {children}
+          </div>
+        </Provider>
       </body>
     </html>
   )
