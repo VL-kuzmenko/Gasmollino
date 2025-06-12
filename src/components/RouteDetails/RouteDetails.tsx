@@ -3,6 +3,15 @@
 import React from 'react'
 import styles from '@/styles/RouteDetails.module.css'
 
+
+interface TokenInfo {
+  symbol: string
+  name: string
+  address: string
+  decimals: number
+  icon?: string
+}
+
 type MarketInfo = {
   name: string
   amount: string
@@ -15,7 +24,7 @@ type RouteDetailsProps = {
   marketInfos: MarketInfo[]
   priceImpactPct: string
   swapUsdValue: string
-  tokens: any[]
+  tokens: TokenInfo[]
 }
 
 const RouteDetails: React.FC<RouteDetailsProps> = ({
