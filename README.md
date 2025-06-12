@@ -4,6 +4,10 @@
 
 ---
 
+## Live Demo
+
+[Check website](https://amazing-shortbread-372867.netlify.app/)
+
 ## 🚀 Features
 
 - **Custom Wallet Integration**: Seamlessly connect your Solana wallet with a uniquely styled interface.
