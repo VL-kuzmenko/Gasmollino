@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+
 import { TokenSelect } from '@/components/TokenSelect/TokenSelect'
 import RouteDetails from '../RouteDetails/RouteDetails'
 import styles from '@/styles/Swap.module.css'
@@ -32,6 +33,7 @@ export default function Swap() {
   const handleCalculate = async () => {
     const from = tokenList.find((t) => t.address === fromToken)
     const to = tokenList.find((t) => t.address === toToken)
+
     if (!from || !to || !amount) return
 
     const uiAmount = parseFloat(amount)
@@ -50,12 +52,14 @@ export default function Swap() {
       })
 
       const data = res.data
+
       console.log(data)
 
       if (data && data.outAmount) {
         setQuoteData(data)
         const received = (parseFloat(data.outAmount) / 10 ** to.decimals).toFixed(4)
         setResult(`${amount} ${from.symbol} ≈ ${received} ${to.symbol}`)
+
       } else {
         setQuoteData(null)
         setResult('No route found or insufficient liquidity.')
@@ -68,10 +72,12 @@ export default function Swap() {
 
   const toTokenObj = tokenList.find((t) => t.address === toToken)
 
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <Link href="/" className={styles.homeLink}>To Home</Link>
+
         <h2 className={styles.heading}>Token Swap Calculator</h2>
         <p className={styles.subheading}>
           Get the most efficient route for swapping tokens across Solana DEXes.
