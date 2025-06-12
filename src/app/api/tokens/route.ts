@@ -1,5 +1,13 @@
 import { NextResponse } from 'next/server'
 
+interface JupToken {
+  address: string
+  symbol: string
+  name: string
+  decimals: number
+  logoURI: string
+}
+
 const WHITELIST = {
   SOL: 'So11111111111111111111111111111111111111112',
   USDC: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
@@ -15,15 +23,15 @@ const WHITELIST = {
 
 export async function GET() {
   const res = await fetch('https://token.jup.ag/all')
-  const allTokens = await res.json()
+  const allTokens = (await res.json()) as JupToken[]
 
   const whitelistAddresses = Object.values(WHITELIST)
 
-  const filtered = allTokens.filter((token: any) =>
+  const filtered = allTokens.filter((token) =>
     whitelistAddresses.includes(token.address)
   )
 
-  const result = filtered.map((token: any) => ({
+  const result = filtered.map((token) => ({
     symbol: token.symbol,
     name: token.name,
     address: token.address,
