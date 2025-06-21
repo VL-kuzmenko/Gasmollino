@@ -150,6 +150,7 @@ export default function Swap() {
           onClick={handleCalculate}
           disabled={!amount || isNaN(Number(amount)) || loading}
         >
+          {loading ? <span className={styles.loadingSpinner}></span> : null}
           {loading ? 'Calculating...' : 'Find Best Route'}
         </button>
 

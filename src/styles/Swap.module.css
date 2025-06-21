@@ -76,11 +76,18 @@
   transition: all 0.3s ease;
   cursor: pointer;
   border: none;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .button:hover {
+  transform: scale(1.03);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(80, 250, 123, 0.4);
+}
+
+.button:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 12px rgba(80, 250, 123, 0.2);
 }
 
 .result {
@@ -110,4 +117,21 @@
 .homeLink:hover {
   color: #ffffff;
   border-bottom: 1px solid #ffffff;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
+
+.loadingSpinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #50fa7b;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
 }
